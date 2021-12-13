@@ -1,4 +1,5 @@
 @import '~react-pro-sidebar/dist/scss/styles.scss';
+@import '~antd/dist/antd.css';
 
 @mixin transform($value){
   -webkit-transform: ($value);
@@ -20,6 +21,9 @@ $color: #282828;
 .sidebar-div {
   display: inline-grid;
   align-items: stretch;
+  position: sticky;
+  top: 0;
+  bottom: 0;
 }
 
 .main {
@@ -38,8 +42,8 @@ $color: #282828;
   align-items: center;
   display: grid;
   padding-top: 80%;
-  padding-left: 5%;
-  width: 100%;
+  padding-left: 4%;
+  width: 105%;
 }
 
 body{
@@ -52,6 +56,8 @@ body{
 
 #root {
   height: 100%;
+  width: 100%;
+  display: -webkit-inline-box;
 }
 
 .start {
