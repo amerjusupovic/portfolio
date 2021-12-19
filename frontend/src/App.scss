@@ -22,11 +22,9 @@ $color: #282828;
   display: inline-grid;
   align-items: stretch;
   bottom: 0;
-  height: 100%;
 }
 
 .sticky {
-  overflow: auto;
   position: -webkit-sticky;
   position: sticky;
   top: 5%;
@@ -71,7 +69,7 @@ body{
 }
 
 .end {
-  width: 70%;
+  width: 90%;
 }
 
 .container{
