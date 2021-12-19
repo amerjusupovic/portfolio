@@ -45,9 +45,10 @@ $color: #282828;
   justify-content: left;
   align-items: center;
   display: grid;
-  padding-top: 35% !important;
-  padding-left: 4%;
+  padding-top: 35vh !important;
+  padding-left: 4vh;
   width: 105%;
+  min-width: 45vh;
 }
 
 body{
