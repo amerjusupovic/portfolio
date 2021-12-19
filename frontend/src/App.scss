@@ -22,12 +22,13 @@ $color: #282828;
   display: inline-grid;
   align-items: stretch;
   bottom: 0;
+  height: 100%;
 }
 
 .sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 5%;
+  top: 0;
 }
 
 .main {
@@ -50,7 +51,7 @@ $color: #282828;
 }
 
 body{
-  height: 100%;
+  height: auto;
   margin-top: -16px;
   position: absolute;
   text-align: center;
@@ -66,6 +67,7 @@ body{
 .start {
   display: flex;
   width: 10%;
+  height: 100vh;
 }
 
 .end {
