@@ -2,7 +2,7 @@ import "./App.scss";
 
 function Home() {
     return (
-      <div className="start">
+      <div className="end fade-in">
         <div className="main">
           <div className="center-left">
             <div className="container">

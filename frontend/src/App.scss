@@ -21,18 +21,23 @@ $color: #282828;
 .sidebar-div {
   display: inline-grid;
   align-items: stretch;
-  position: sticky;
-  top: 0;
   bottom: 0;
+  height: 100%;
+}
+
+.sticky {
+  overflow: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5%;
 }
 
 .main {
   display: inline-table;
+  width: 100%;
 }
 
 .sidebar {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   height: 100%;
 }
@@ -41,16 +46,16 @@ $color: #282828;
   justify-content: left;
   align-items: center;
   display: grid;
-  padding-top: 80%;
+  padding-top: 35% !important;
   padding-left: 4%;
   width: 105%;
 }
 
 body{
-  width: 100%;
   height: 100%;
+  margin-top: -16px;
   position: absolute;
-  text-align: center; 
+  text-align: center;
   background: #4a565e;
 }
 
@@ -61,8 +66,12 @@ body{
 }
 
 .start {
-  height: 100%;
   display: flex;
+  width: 10%;
+}
+
+.end {
+  width: 70%;
 }
 
 .container{
@@ -194,6 +203,30 @@ $timeup: 1s;
   animation:         rotation $timeup  10.6 ease-out forwards;  
 }
 
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
 @keyframes rotation {
   0% {

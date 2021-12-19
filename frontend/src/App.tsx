@@ -7,9 +7,9 @@ import { Menu } from 'antd';
 function App() {
   return (
     <Router>
-      <div className="start">
-        <div className="sidebar-div">
-          <Menu>
+      <div className="start sidebar-div sticky">
+        <div className="sidebar-div sticky">
+          <Menu mode={"inline"} theme={"dark"}>
             <Menu.Item>Menu</Menu.Item>
             <Menu.SubMenu title="SubMenu">
               <Menu.Item>SubMenuItem</Menu.Item>
