@@ -2,8 +2,8 @@ import "./App.scss";
 
 function Home() {
     return (
-      <div className="end fade-in">
-        <div className="main">
+      <div className="end">
+        <div className="main fade-in">
           <div className="center-left">
             <div className="container">
               <div className="h title letter">H</div>

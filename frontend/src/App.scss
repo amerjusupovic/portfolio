@@ -30,11 +30,14 @@ $color: #282828;
 
 .menu-icon svg:hover{
   color: white;
+  fill: white;
 }
 
 .menu-icon svg{
   width: 3.5vh;
   height: auto;
+  color: rgba(255, 255, 255, 0.65);
+  fill: rgba(255, 255, 255, 0.65);
 }
 
 .menu-icon-list {
@@ -96,7 +99,7 @@ body{
 }
 
 .end {
-  width: 90%;
+  width: 94%;
 }
 
 .container{

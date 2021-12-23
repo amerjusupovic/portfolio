@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import { Menu } from 'antd';
 import { GithubOutlined, GitlabOutlined } from '@ant-design/icons';
+import { getGithubProjects } from "./ProjectApi";
 
 function App() {
   const [collapsed, setCollapsed] = useState(true);
 
   function setCollapsedTrue() { setCollapsed(true) }
   function setCollapsedFalse() { setCollapsed(false) }
+
+  useEffect(() => {
+    async function getProjects() {
+      const githubProjects = await getGithubProjects();
+    }
+    getProjects();
+  }, [])
 
   return (
     <Router>
@@ -22,8 +30,8 @@ function App() {
             </Menu.SubMenu>
             <div className="align-end">
               <div className="menu-icon-list">
-                <GithubOutlined className={"menu-icon"}/>
-                <GitlabOutlined className={"menu-icon"}/>
+                <a href="https://github.com/amerjusupovic"><GithubOutlined className={"menu-icon"}/></a>
+                <a href="https://gitlab.com/amerj00"><GitlabOutlined className={"menu-icon"}/></a>
               </div>
             </div>
           </Menu>
