@@ -18,6 +18,32 @@ $titlefontsize: 10rem;
 $subtitlefontsize: 5rem;
 $color: #282828;
 
+.menu {
+  width: 14vh;
+}
+
+.menu-icon {
+  width: 6vh;
+  height: 4vh;
+  cursor: pointer;
+}
+
+.menu-icon svg:hover{
+  color: white;
+}
+
+.menu-icon svg{
+  width: 3.5vh;
+  height: auto;
+}
+
+.menu-icon-list {
+  padding-bottom: 1.5vh;
+  padding-left: 1vh;
+  position: absolute;
+  bottom: 0;
+}
+
 .sidebar-div {
   display: inline-grid;
   align-items: stretch;
@@ -46,8 +72,7 @@ $color: #282828;
   align-items: center;
   display: grid;
   padding-top: 35vh !important;
-  padding-left: 4vh;
-  width: 105%;
+  padding-left: 3vh;
   min-width: 45vh;
 }
 
@@ -67,7 +92,6 @@ body{
 
 .start {
   display: flex;
-  width: 10%;
   height: 100vh;
 }
 

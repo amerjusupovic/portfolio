@@ -8,16 +8,24 @@ import { GithubOutlined, GitlabOutlined } from '@ant-design/icons';
 function App() {
   const [collapsed, setCollapsed] = useState(true);
 
+  function setCollapsedTrue() { setCollapsed(true) }
+  function setCollapsedFalse() { setCollapsed(false) }
+
   return (
     <Router>
       <div className="start sticky">
         <div className="sidebar-div sticky">
-          <Menu mode={"inline"} theme={"dark"} inlineCollapsed={collapsed}>
+          <Menu onMouseOver={setCollapsedFalse} onMouseOut={setCollapsedTrue} mode={"inline"} theme={"dark"} inlineCollapsed={collapsed} className={"menu"}>
             <Menu.Item>Menu</Menu.Item>
             <Menu.SubMenu title="SubMenu">
               <Menu.Item>SubMenuItem</Menu.Item>
             </Menu.SubMenu>
-            <Menu.Item icon={<GitlabOutlined/>}/>
+            <div className="align-end">
+              <div className="menu-icon-list">
+                <GithubOutlined className={"menu-icon"}/>
+                <GitlabOutlined className={"menu-icon"}/>
+              </div>
+            </div>
           </Menu>
         </div>
       </div>
