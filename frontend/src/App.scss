@@ -61,9 +61,11 @@ $color: #282828;
 }
 
 .main {
-  display: inline-table;
   width: 100%;
+  display: -webkit-inline-box;
 }
+
+// flex-wrap: wrap;
 
 .sidebar {
   top: 0;
@@ -73,10 +75,19 @@ $color: #282828;
 .center-left {
   justify-content: left;
   align-items: center;
-  display: grid;
   padding-top: 35vh !important;
   padding-left: 3vh;
-  min-width: 45vh;
+  width: 48vh;
+}
+
+.about-me {
+  width: 135vh;
+  padding: 20vh 4vh 0 4vh;
+}
+
+.about-me p{
+  padding: 3vh 10vh 3vh 10vh;
+  width: 115vh;
 }
 
 body{
@@ -104,6 +115,7 @@ body{
 
 .container{
   position: relative;
+  min-width: 45vh;
 }
 
 .letter{

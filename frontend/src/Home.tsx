@@ -1,4 +1,5 @@
 import "./App.scss";
+import { Paper } from "@mui/material";
 
 function Home() {
     return (
@@ -20,6 +21,13 @@ function Home() {
               <div className="se subtitle letter">E</div>
               <div className="sr subtitle letter">R</div>
             </div>
+          </div>
+          <div className="about-me">
+            <Paper elevation={10}>
+              <p>
+                Thanks for checking out my portfolio!
+              </p>
+            </Paper>
           </div>
         </div>
       </div>
