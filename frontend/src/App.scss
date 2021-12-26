@@ -17,27 +17,62 @@
 $titlefontsize: 10rem;
 $subtitlefontsize: 5rem;
 $color: #282828;
+$mainfont: Inter;
+$lightblue: #abc7ff;
+$midblue: #7d91ba;
+$darkblue: #4d5870;
+
+.card-text-title {
+  font-family: $mainfont, sans-serif;
+  color: white;
+}
+
+.card-text-body-visible {
+  font-family: $mainfont, sans-serif;
+  font-size: 1rem;
+  color: $darkblue !important;
+}
+
+.card-text-body-invisible {
+  font-family: $mainfont, sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.card-text-body-visible a {
+  font-family: $mainfont, sans-serif;
+  font-size: 1rem;
+}
+
+.card-text-body-invisible a {
+  font-family: $mainfont, sans-serif;
+  font-size: 1rem;
+  color: white;
+}
 
 .menu {
   width: 14vh;
+  background-color: $midblue !important;
+  border-right-color: $midblue !important;
 }
 
 .menu-icon {
-  width: 6vh;
+  width: 5.6vh;
   height: 4vh;
   cursor: pointer;
+  padding-left: 5%;
 }
 
 .menu-icon svg:hover{
-  color: white;
-  fill: white;
+  color: rgba(74, 86, 94, 0.65);
+  fill: rgba(74, 86, 94, 0.65);
 }
 
 .menu-icon svg{
   width: 3.5vh;
   height: auto;
-  color: rgba(255, 255, 255, 0.65);
-  fill: rgba(255, 255, 255, 0.65);
+  color: black;
+  fill: black;
 }
 
 .menu-icon-list {
@@ -81,13 +116,30 @@ $color: #282828;
 }
 
 .about-me {
-  width: 135vh;
-  padding: 20vh 4vh 0 4vh;
+  width: 60vw;
+  padding: 15vh 3vw 0 3vw;
 }
 
-.about-me p{
-  padding: 3vh 10vh 3vh 10vh;
-  width: 115vh;
+.about-me p {
+  padding: 3vh 1vw 3vh 1vw;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.about-me-card {
+  width: 57.5vw;
+  min-width: 40rem;
+}
+
+.lower-card-div {
+  padding-left: 2.5vw;
+  padding-top: 10.5rem;
+}
+
+.top-card {
+  background-color: $lightblue !important;
+  position: absolute;
+  z-index: 1;
 }
 
 body{
@@ -120,7 +172,7 @@ body{
 
 .letter{
   display: inline-block;
-  font-family: Inter, sans-serif;
+  font-family: $mainfont, sans-serif;
   font-weight: bolder;
   position: relative;
   letter-spacing: 0.3rem;
@@ -148,10 +200,12 @@ body{
 
 .title {
   font-size: $titlefontsize;
+  font-weight: bolder;
 }
 
 .subtitle {
   font-size: $subtitlefontsize;
+  font-weight: bolder;
 }
 
 .c{
@@ -249,6 +303,14 @@ $timeup: 1s;
   -moz-animation: fadeIn ease 3s;
   -o-animation: fadeIn ease 3s;
   -ms-animation: fadeIn ease 3s;
+}
+
+.fade-in-faster {
+  animation: fadeIn ease 1.5s;
+  -webkit-animation: fadeIn ease 1.5s;
+  -moz-animation: fadeIn ease 1.5s;
+  -o-animation: fadeIn ease 1.5s;
+  -ms-animation: fadeIn ease 1.5s;
 }
 
 @keyframes fadeIn {

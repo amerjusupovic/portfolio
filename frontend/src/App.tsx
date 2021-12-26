@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
@@ -8,15 +8,17 @@ import { getGithubProjects } from "./ProjectApi";
 
 function App() {
   const [collapsed, setCollapsed] = useState(true);
+  const [githubProjects, setGithubProjects] = useState([] as any);
 
   function setCollapsedTrue() { setCollapsed(true) }
   function setCollapsedFalse() { setCollapsed(false) }
 
   useEffect(() => {
     async function getProjects() {
-      const githubProjects = await getGithubProjects();
+      const data = await getGithubProjects();
+      setGithubProjects(data);
     }
-    getProjects();
+    // getProjects();
   }, [])
 
   return (
