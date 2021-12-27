@@ -37,7 +37,7 @@ function Home(props: any) {
             </div>
           </Paper>
           <div className="lower-card-div">
-            <Paper className="about-me-card" onMouseOver={setAboutVisibleTrue} elevation={10}>
+            <Paper className="about-me-card body-card" onMouseOver={setAboutVisibleTrue} elevation={10}>
               <p className={aboutVisible ? "card-text-body-visible fade-in-faster" : "card-text-body-invisible"}>
                 A small gallery of some of the projects I've done over the years and I'm going to continue adding to this collection over time.
                 It also includes some quick facts and information about me. 
