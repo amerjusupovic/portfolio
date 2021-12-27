@@ -18,7 +18,7 @@ function App() {
       const data = await getGithubProjects();
       setGithubProjects(data);
     }
-    // getProjects();
+    getProjects();
   }, [])
 
   return (
@@ -40,7 +40,7 @@ function App() {
         </div>
       </div>
       <Routes>
-        <Route path="/" element = { <Home/> }/>
+        <Route path="/" element = { <Home projects = {githubProjects}/> }/>
       </Routes>
     </Router>
   );

@@ -1,8 +1,11 @@
 import "./App.scss";
 import { useState } from 'react';
 import { Paper } from "@mui/material";
+import { LoadingOutlined } from '@ant-design/icons';
+import FadeInSection from './FadeInSection';
+import ProjectCard from './ProjectCard';
 
-function Home() {
+function Home(props: any) {
   const [aboutVisible, setAboutVisible] = useState(false);
 
   function setAboutVisibleTrue() { setAboutVisible(true) }
@@ -49,6 +52,9 @@ function Home() {
           <span></span>
           <span></span>
         </div>
+      </div>
+      <div className="main center">
+        {props.projects.length > 0 ? <FadeInSection>{props.projects.map((project: any) => <ProjectCard project={project}/>)}</FadeInSection> : <LoadingOutlined className="loading-icon"/>}
       </div>
     </div>
   );

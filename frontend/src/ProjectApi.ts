@@ -6,6 +6,7 @@ async function getGithubProjects() {
     .then((response: any) => {
         return response.data;
     });
+    console.log(data[0]);
     return data;
 }
 
