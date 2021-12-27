@@ -25,28 +25,30 @@ $darkblue: #4d5870;
 .card-text-title {
   font-family: $mainfont, sans-serif;
   color: white;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .card-text-body-visible {
   font-family: $mainfont, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: $darkblue !important;
 }
 
 .card-text-body-invisible {
   font-family: $mainfont, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
 }
 
 .card-text-body-visible a {
   font-family: $mainfont, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .card-text-body-invisible a {
   font-family: $mainfont, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -111,13 +113,13 @@ $darkblue: #4d5870;
   justify-content: left;
   align-items: center;
   padding-top: 35vh !important;
-  padding-left: 3vh;
+  padding-left: 2vw;
   width: 48vh;
 }
 
 .about-me {
   width: 60vw;
-  padding: 15vh 3vw 0 3vw;
+  padding: 15vh 3vw 0 4vw;
 }
 
 .about-me p {
@@ -127,13 +129,13 @@ $darkblue: #4d5870;
 }
 
 .about-me-card {
-  width: 57.5vw;
-  min-width: 40rem;
+  width: 58vw;
+  min-width: 35rem;
 }
 
 .lower-card-div {
-  padding-left: 2.5vw;
-  padding-top: 10.5rem;
+  padding-left: 2vw;
+  padding-top: 8.3rem;
 }
 
 .top-card {
@@ -356,5 +358,59 @@ $timeup: 1s;
   }
   100% {
     @include transform(rotate(0deg));
+  }
+}
+
+.arrow{
+  padding-top: 140vh;
+  padding-right: 70vw;
+  display: inline-grid;
+  transform: translate(-50%,-50%);
+}
+
+.arrow span{
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-bottom: 5px solid #06A8FF;
+  border-right: 5px solid #06A8FF;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+@-webkit-keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
   }
 }
