@@ -7,7 +7,7 @@ function ProjectCard(props: any) {
     return (
         <div className="project-card-div">
             <div className="project-card-top-div">
-                <Paper className="top-card project-card-top">
+                <Paper elevation={10} className="top-card project-card-top">
                     <p className="project-card-title-text">
                         {props.project.name}
                     </p>
@@ -15,9 +15,9 @@ function ProjectCard(props: any) {
             </div>
             <div className="project-card-body-div">
                 <a href={props.project.svn_url}>
-                    <Paper className="project-card-body">
+                    <Paper elevation={10} className="project-card-body">
                         <p className="project-card-body-text">
-                            description
+                            {props.project.description}
                         </p>
                     </Paper>
                 </a>
