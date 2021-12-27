@@ -26,10 +26,10 @@ function App() {
       <div className="start sticky">
         <div className="sidebar-div sticky">
           <Menu onMouseOver={setCollapsedFalse} onMouseOut={setCollapsedTrue} mode={"inline"} theme={"dark"} inlineCollapsed={collapsed} className={"menu"}>
-            <Menu.Item>Menu</Menu.Item>
-            <Menu.SubMenu title="SubMenu">
-              <Menu.Item>SubMenuItem</Menu.Item>
-            </Menu.SubMenu>
+            <Menu.Item>Home</Menu.Item>
+            <Menu.Item>About</Menu.Item>
+            <Menu.Item>Skills</Menu.Item>
+            <Menu.Item>Projects</Menu.Item>
             <div className="align-end">
               <div className="menu-icon-list">
                 <a href="https://github.com/amerjusupovic"><GithubOutlined className={"menu-icon"}/></a>
