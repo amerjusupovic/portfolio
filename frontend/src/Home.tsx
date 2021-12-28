@@ -1,6 +1,6 @@
 import "./App.scss";
 import { useState } from 'react';
-import { Paper } from "@mui/material";
+import { Paper, Grid } from "@mui/material";
 import { LoadingOutlined } from '@ant-design/icons';
 import FadeInSection from './FadeInSection';
 import ProjectCard from './ProjectCard';
@@ -54,7 +54,13 @@ function Home(props: any) {
         </div>
       </div>
       <div className="main center">
-        {props.projects.length > 0 ? <FadeInSection>{props.projects.map((project: any) => <ProjectCard project={project}/>)}</FadeInSection> : <LoadingOutlined className="loading-icon"/>}
+        {props.projects.length > 0 ? 
+          <FadeInSection>
+            <Grid container justifyContent="center" spacing={1}>
+              {props.projects.map((project: any) => <Grid item xs={5}>
+                <ProjectCard project={project}/>
+              </Grid>)}
+            </Grid></FadeInSection> : <LoadingOutlined className="loading-icon"/>}
       </div>
     </div>
   );

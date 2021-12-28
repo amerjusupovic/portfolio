@@ -16,6 +16,9 @@ function App() {
   useEffect(() => {
     async function getProjects() {
       const data = await getGithubProjects();
+      const extraProject = {svn_url: "https://gitlab.com/cs373project/ftblstatrat", name: "ftblstatrat",
+      description: "Website designed for soccer fans to learn more about their favorite players and teams, and browse previous matches with statistics displayed in an intuitive fashion."};
+      data.push(extraProject);
       setGithubProjects(data);
     }
     getProjects();
