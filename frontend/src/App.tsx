@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import Home from "./Home";
 import { Menu } from 'antd';
 import { GithubOutlined, GitlabOutlined } from '@ant-design/icons';
@@ -43,7 +43,7 @@ function App() {
         </div>
       </div>
       <Routes>
-        <Route path="/" element = { <Home projects = {githubProjects}/> }/>
+        <Route path="/" element = { <Home projects={githubProjects}/> }/>
       </Routes>
     </Router>
   );

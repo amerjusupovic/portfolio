@@ -53,7 +53,7 @@ function Home(props: any) {
           <span></span>
         </div>
       </div>
-      <div className="main center">
+      <div className="main center padding-top">
         {props.projects.length > 0 ? 
           <FadeInSection>
             <Grid container justifyContent="center" spacing={1}>
